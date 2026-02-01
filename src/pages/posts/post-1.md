@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: "My First Post"
 pubDate: 2026-02-01
 description: "This is my first post"
@@ -8,8 +9,6 @@ image:
   alt: "logo by astro。"
 tags: ["astro", "blog", "tutorial"]
 ---
-
-# My First Post
 
 ## Topic 1
 

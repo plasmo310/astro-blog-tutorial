@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: "My Third Post"
 pubDate: 2026-02-01
 description: "This is my third post"
@@ -8,8 +9,6 @@ image:
   alt: "logo by astro。"
 tags: ["astro", "blog", "tutorial"]
 ---
-
-# My Third Post
 
 ## Topic 1
 

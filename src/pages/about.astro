@@ -1,5 +1,5 @@
 ---
-import Header from '../components/Header.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
 
 const pageTitle = "About me";
@@ -26,40 +26,23 @@ const styleFontWeight = "bold";
 const styleTextCase = "uppercase"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-        <style define:vars={{styleSkillColor, styleFontWeight, styleTextCase}}>
-            h1 {
-                color: purple;
-                font-size: 4rem;
-            }
-            .favorite {
-                color: var(--styleSkillColor);
-                font-weight: var(--styleFontWeight);
-                text-transform: var(--styleTextCase)
-            }
-        </style>
-	</head>
-	<body>
-		<Header />
-
-		<h1>{pageTitle}</h1>
-        <p>I am Game {identity.jobs.join(" and ")}!!</p>
-        <p>■Favorites</p>        
-        <ul>
-            {favorites.map((favorite) => <li class="favorite">{favorite}</li>)}
-        </ul>
-        {
-            showPrivate && <p>I'm not good at getting up early...</p>
+<BaseLayout pageTitle={pageTitle}>
+    <style define:vars={{styleSkillColor, styleFontWeight, styleTextCase}}>
+        .favorite {
+            color: var(--styleSkillColor);
+            font-weight: var(--styleFontWeight);
+            text-transform: var(--styleTextCase)
         }
-        {
-            showSelect === 2 ? <p>Cat is very cute.</p> : <></>
-        }
-	</body>
-</html>
+    </style>
+    <p>I am Game {identity.jobs.join(" and ")}!!</p>
+    <p>■Favorites</p>        
+    <ul>
+        {favorites.map((favorite) => <li class="favorite">{favorite}</li>)}
+    </ul>
+    {
+        showPrivate && <p>I'm not good at getting up early...</p>
+    }
+    {
+        showSelect === 2 ? <p>Cat is very cute.</p> : <></>
+    }
+</BaseLayout>
