@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 const pageTitle = "About me";
 
 const identity = {
@@ -17,6 +19,10 @@ const favorites = [
 
 const showPrivate: boolean = true;
 const showSelect: number = 0;
+
+const styleSkillColor = "crimson";
+const styleFontWeight = "bold";
+const styleTextCase = "uppercase"
 ---
 
 <html lang="en">
@@ -27,6 +33,17 @@ const showSelect: number = 0;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+        <style define:vars={{styleSkillColor, styleFontWeight, styleTextCase}}>
+            h1 {
+                color: purple;
+                font-size: 4rem;
+            }
+            .favorite {
+                color: var(--styleSkillColor);
+                font-weight: var(--styleFontWeight);
+                text-transform: var(--styleTextCase)
+            }
+        </style>
 	</head>
 	<body>
         <a href="/">Home</a>
@@ -37,7 +54,7 @@ const showSelect: number = 0;
         <p>I am Game {identity.jobs.join(" and ")}!!</p>
         <p>■Favorites</p>        
         <ul>
-            {favorites.map((favorite) => <li>{favorite}</li>)}
+            {favorites.map((favorite) => <li class="favorite">{favorite}</li>)}
         </ul>
         {
             showPrivate && <p>I'm not good at getting up early...</p>
