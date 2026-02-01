@@ -20,6 +20,7 @@ const favorites = [
 
 const showPrivate: boolean = true;
 const showSelect: number = 0;
+const isFinished: boolean = true;
 
 const styleSkillColor = "crimson";
 const styleFontWeight = "bold";
@@ -44,5 +45,8 @@ const styleTextCase = "uppercase"
     }
     {
         showSelect === 2 ? <p>Cat is very cute.</p> : <></>
+    }
+    {
+        isFinished && <p>Finished Astro.js tutorial!!</p>
     }
 </BaseLayout>
