@@ -1,4 +1,6 @@
-# Astro Starter Kit: Minimal
+# Astro Blog Tutorial
+
+- Astro.jsのブログ作成チュートリアルで作成したリポジトリです。
 
 ```sh
 npm create astro@latest -- --template minimal
