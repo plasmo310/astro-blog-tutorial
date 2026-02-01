@@ -1,4 +1,5 @@
 ---
+import Header from '../components/Header.astro';
 import '../styles/global.css';
 
 const pageTitle = "About me";
@@ -46,9 +47,7 @@ const styleTextCase = "uppercase"
         </style>
 	</head>
 	<body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
+		<Header />
 
 		<h1>{pageTitle}</h1>
         <p>I am Game {identity.jobs.join(" and ")}!!</p>

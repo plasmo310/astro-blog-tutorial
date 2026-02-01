@@ -1,0 +1,7 @@
+---
+const { label, platform, username } = Astro.props;
+---
+
+<div>
+    {label}: <a href={`https://www.${platform}.com/${username}`}>{username}</a>
+</div>

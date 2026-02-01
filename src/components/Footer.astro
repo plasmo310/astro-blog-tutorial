@@ -1,0 +1,19 @@
+---
+import Social from "./Social.astro";
+---
+
+<style>
+    .social-list {
+        display: flex;
+        flex-flow: column;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+</style>
+
+<footer>
+    <div class="social-list">
+        <Social label="X" platform="twitter" username="plasmo310" />
+        <Social label="GitHub" platform="github" username="plasmo310" />
+    </div>
+</footer>
