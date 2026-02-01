@@ -7,7 +7,7 @@ author: "plasmo310"
 image:
   url: "https://docs.astro.build/assets/rose.webp"
   alt: "logo by astro。"
-tags: ["astro", "blog", "tutorial"]
+tags: ["astro", "blog", "tutorial", "test"]
 ---
 
 ## Topic 1
