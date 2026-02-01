@@ -1,5 +1,22 @@
 ---
+const pageTitle = "About me";
 
+const identity = {
+    name: "plasmo",
+    jobs: [
+        "Game Developer",
+        "Software Engineer",
+    ],
+};
+
+const favorites = [
+    "Unity",
+    "Unreal Engine",
+    "Houdini"
+];
+
+const showPrivate: boolean = true;
+const showSelect: number = 0;
 ---
 
 <html lang="en">
@@ -9,15 +26,24 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
         <a href="/">Home</a>
         <a href="/about/">About</a>
         <a href="/blog/">Blog</a>
 
-		<h1>About me</h1>
-        <p>I am Game Developer and Software Engineer!!</p>
-        <p>  Favorite: Unity, Unreal Engine, Houdini...</p>        
+		<h1>{pageTitle}</h1>
+        <p>I am Game {identity.jobs.join(" and ")}!!</p>
+        <p>■Favorites</p>        
+        <ul>
+            {favorites.map((favorite) => <li>{favorite}</li>)}
+        </ul>
+        {
+            showPrivate && <p>I'm not good at getting up early...</p>
+        }
+        {
+            showSelect === 2 ? <p>Cat is very cute.</p> : <></>
+        }
 	</body>
 </html>

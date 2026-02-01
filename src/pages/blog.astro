@@ -1,4 +1,5 @@
 ---
+const pageTitle = "Blog";
 
 ---
 
@@ -9,14 +10,19 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
         <a href="/">Home</a>
         <a href="/about/">About</a>
         <a href="/blog/">Blog</a>
         
-		<h1>Blog</h1>
-        <p>TODO: Display as my posts.</p>
+		<h1>{pageTitle}</h1>
+        <p>My Posts</p>
+        <ul>
+            <li><a href="/posts/post-1/">My First Post</a></li>
+            <li><a href="/posts/post-2/">My Secound Post</a></li>
+            <li><a href="/posts/post-3/">My Third Post</a></li>
+        </ul>
 	</body>
 </html>
